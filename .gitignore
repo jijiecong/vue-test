@@ -1,0 +1,13 @@
+.DS_Store
+node_modules/
+dist/
+src/main/webapp/dist/
+npm-debug.log
+yarn-error.log
+.idea
+.settings/
+target/
+*.iml
+.svn/
+.classpath
+.project

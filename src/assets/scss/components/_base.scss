@@ -1,0 +1,102 @@
+html {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background-color: #eff0f4;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.align_center {
+  text-align: center;
+}
+
+.align_left {
+  text-align: left;
+}
+
+.align_right {
+  text-align: right;
+}
+
+.ofh {
+  overflow: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.m_auto {
+  margin: auto;
+}
+
+.width_100 {
+  width: 100% !important;
+}
+
+.height_100 {
+  height: 100% !important;
+}
+
+.nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.d_box {
+  display: flex;
+  box-sizing: border-box;
+  flex: 1;
+  width: 100%;
+}
+
+.d_boxflex {
+  flex: 1;
+  display: block;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.el-button-group .el-button {
+  float: none;
+}
+.el-form {
+  .el-form-item {
+    width: 500px;
+  }
+}
+.el-select{
+  width:100%;
+}
