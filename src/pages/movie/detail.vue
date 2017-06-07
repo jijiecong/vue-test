@@ -1,12 +1,12 @@
 <template>
-  <div class="panel" style="width: 60%;">
-    <panel-title :title="$route.meta.title"></panel-title>
-    <div class="panel-body"
+  <div class="panel" >
+    <panel-title style="text-align: center;margin-bottom: 30px;margin-top: 30px;font-size: 24px" :title="$route.meta.title"></panel-title>
+    <div class="panel-body"  style="width: 60%;"
          v-loading="load_data"
-         element-loading-text="拼命加载中">
+         element-loading-text="拼命加载中" >
       <el-row>
-        <el-col>
-          <el-form ref="form" :model="form" label-width="80px">
+        <el-col :offset="14">
+          <el-form ref="form" :model="form" label-width="80px" >
             <el-form-item label="电影名:" prop="title">
               <el-input v-model="form.title" placeholder="请输入内容" :readonly="true"></el-input>
             </el-form-item>
@@ -27,6 +27,10 @@
             </el-form-item>
             <el-form-item label="评分:">
               <el-input  v-model="form.rating.average" placeholder="请输入内容" :readonly="true" ></el-input>
+            </el-form-item>
+            <el-form-item align="center">
+              <el-button  @click="$router.back()">取消</el-button>
+              <el-button type="info" @click="$router.back()">确定</el-button>
             </el-form-item>
           </el-form>
         </el-col>

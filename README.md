@@ -38,6 +38,7 @@ npm install -g cnpm –-registry=https://registry.npm.taobao.org
 5、路由拦截：http://www.tuicool.com/articles/JRJFN3N 
 6、图片上传：http://blog.csdn.net/swingpyzf/article/details/20230865 https://segmentfault.com/q/1010000007566567
 7、项目中用到的豆瓣api：https://developers.douban.com/wiki/?title=movie_v2#subject
+8、vue-router文档：https://router.vuejs.org/zh-cn/
 
 ## Build Setup（项目启动）
 

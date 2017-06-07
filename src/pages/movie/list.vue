@@ -1,12 +1,11 @@
 <template>
   <div class="panel">
-    <img src="../../assets/logo.png">
-    <panel-title :title="$route.meta.title"></panel-title>
-    <h2>{{title}}</h2>
+    <!--panel-title :title="$route.meta.title"></panel-title-->
+    <h2 align="center" style="margin-top: 30px">{{title}}</h2>
     <div align="center">
       <form @submit.prevent="on_refresh">
-        <el-row style="margin-bottom: 20px;">
-          <el-col :span="17" :offset="4">
+        <el-row style="margin-bottom: 30px;">
+          <el-col :span="16" :offset="5">
             <el-row :gutter="10">
               <el-col :span="6">
                 <el-select v-model="city" placeholder="请选择" >
@@ -19,7 +18,7 @@
                 </el-select >
               </el-col>
               <el-col :span="1">
-                <el-button type="primary" icon="search" native-type="submit">查看详情</el-button>
+                <el-button type="primary" icon="search" native-type="submit">查询</el-button>
               </el-col>
             </el-row>
           </el-col>
@@ -31,7 +30,6 @@
         :data="articles"
         v-loading="load_data"
         element-loading-text="拼命加载中"
-        :align="'center'"
         border
         style="width: 60%"
         @selection-change="handleSelectionChange">
@@ -74,7 +72,7 @@
           </template>
         </el-table-column>
       </el-table>
-      <div class="block">
+      <div class="block" style="width: 60%" align="right">
         <el-pagination
           @current-change="handleCurrentChange"
           :current-page="currentPage"
