@@ -1,0 +1,79 @@
+<template>
+  <div class="panel" style="width: 60%;">
+    <panel-title :title="$route.meta.title"></panel-title>
+    <div class="panel-body"
+         v-loading="load_data"
+         element-loading-text="拼命加载中">
+      <el-row>
+        <el-col>
+          <el-form ref="form" :model="form" label-width="80px">
+            <el-form-item label="电影名:" prop="title">
+              <el-input v-model="form.title" placeholder="请输入内容" :readonly="true"></el-input>
+            </el-form-item>
+            <el-form-item label="电影简介:" prop="summary">
+              <el-input v-model="form.summary" placeholder="请输入内容" type="textarea" :autosize="{ minRows: 2, maxRows: 10}" :readonly="true"></el-input>
+            </el-form-item>
+            <el-form-item label="年份:" prop="year">
+              <el-input v-model="form.year" placeholder="请输入内容" :readonly="true"></el-input>
+            </el-form-item>
+            <el-form-item label="链接:" prop="alt">
+              <el-input v-model="form.alt" placeholder="请输入内容" :readonly="true" ></el-input>
+            </el-form-item>
+            <el-form-item label="国家:" v-for="country in form.countries" :key="country">
+              <el-input :value="country" placeholder="请输入内容" :readonly="true"></el-input>
+            </el-form-item>
+            <el-form-item label="导演:" v-for="director in form.directors" :key="director.id">
+              <el-input  :value="director.name" placeholder="请输入内容" :readonly="true"></el-input>
+            </el-form-item>
+            <el-form-item label="评分:">
+              <el-input  v-model="form.rating.average" placeholder="请输入内容" :readonly="true" ></el-input>
+            </el-form-item>
+          </el-form>
+        </el-col>
+      </el-row>
+    </div>
+  </div>
+</template>
+
+<script>
+  import {panelTitle } from 'components'
+  import {vue_test} from 'common/request_api'
+
+  export default{
+    data(){
+      return {
+        id: this.$route.params.id,
+        load_data: true,
+        form: {
+          title:'',
+          summary:'',
+          year:'',
+          alt:'',
+          rating:{
+            average:''
+          },
+        }
+      }
+    },
+    created(){
+      this.get_table_data()
+    },
+    methods: {
+      //获取数据
+      get_table_data(){
+        this.load_data = true
+        this.$http.get(vue_test.detail+"/"+this.id, {
+
+        }).then(({data}) => {
+          this.form = data
+          this.load_data = false
+        }).catch(() => {
+          this.load_data = false
+        })
+      },
+    },
+    components: {
+      panelTitle
+    }
+  }
+</script>

@@ -40,7 +40,6 @@
     methods: {
       async httpRequest(option) {//自定义上传方法
 //        console.log(option.action)
-        console.log(option)
         let imageData = new FormData();
           imageData.append(option.filename, option.file);
         this.axios.post(option.action, imageData)

@@ -11,6 +11,10 @@ const routes = [
     meta: { title: "豆瓣电影" },
     components: { default: () => import('pages/movie/list') },
   },{
+    path: '/movie/detail/:id', name: 'movieDetail',
+    meta: { title: "电影详情" },
+    components: { default: () => import('pages/movie/detail') },
+  },{
     path: '/user/list', name: 'userList',
     meta: { title: "用户" },
     components: { default: () => import('pages/user/list') },

@@ -41,7 +41,6 @@ const install = (Vue) => {
       //在发送请求之前做某事
       //config.url = 'vueApi' + '/idPGx6mR' + config.url
       config.url = '/api' + config.url
-      console.log(config.url)
       return config
     },
     (error) => {
