@@ -18,6 +18,8 @@ import searchSelect from 'components/searchSelect'
 import imageUpload from 'components/imageUpload'
 //可预览照片列表
 import imagePreview from 'components/imagePreview'
+//评分
+import rate from 'components/rate'
 export {
   simpleSelect,
   panelTitle,
@@ -25,5 +27,6 @@ export {
   transferMeiren,
   searchSelect,
   imageUpload,
-  imagePreview
+  imagePreview,
+  rate
 }

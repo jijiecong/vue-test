@@ -9,7 +9,7 @@
 
           <el-form ref="form" :model="form" label-width="80px" >
             <el-form-item label="海报:" prop="image">
-              <image-preview :disabled="disabled" :fileList="fileList"></image-preview>
+              <image-preview :disabled="disabled" :fileList="fileList" style="margin-top: -40px"></image-preview>
             </el-form-item>
             <el-form-item label="电影名:" prop="title">
               <el-input v-model="form.title" placeholder="请输入内容" :readonly="true"></el-input>
@@ -30,7 +30,7 @@
               <el-input  :value="director.name" placeholder="请输入内容" :readonly="true"></el-input>
             </el-form-item>
             <el-form-item label="评分:">
-              <el-input  v-model="form.rating.average" placeholder="请输入内容" :readonly="true" ></el-input>
+              <rate :rate_five="rate_five" :rate_ten="rate_ten" style="margin-top: 7px"></rate>
             </el-form-item>
             <el-form-item align="center">
               <el-button  @click="$router.back()">取消</el-button>
@@ -44,7 +44,7 @@
 </template>
 
 <script>
-  import {panelTitle,imagePreview } from 'components'
+  import {panelTitle,imagePreview,rate } from 'components'
   import {vue_test} from 'common/request_api'
 
   export default{
@@ -57,6 +57,8 @@
         imageUrl:'',
         fileList:[],
         disabled: true,
+        rate_five:0,
+        rate_ten:'',
         form: {
           title:'',
           summary:'',
@@ -81,6 +83,8 @@
           this.form = data
           this.imageUrl = data.images.medium
           this.fileList.push({url:data.images.medium,name:data.title})
+          this.rate_five = data.rating.average/2
+          this.rate_ten = data.rating.average.toString()
           this.load_data = false
         }).catch(() => {
           this.load_data = false
@@ -89,7 +93,8 @@
     },
     components: {
       panelTitle,
-      imagePreview
+      imagePreview,
+      rate
     }
   }
 </script>
