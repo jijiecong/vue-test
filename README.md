@@ -24,14 +24,17 @@
 
 1、代理相关：http://blog.csdn.net/u012857153/article/details/71403530     
 2、.babelrc配置文件（）：http://www.tuicool.com/articles/rA7Vjiz    
-3、bodyParse和qs：http://www.cnblogs.com/wuqun/p/5942918.html    http://blog.csdn.net/sinat_25127047/article/details/50596905     
+3、bodyParse和qs：http://www.cnblogs.com/wuqun/p/5942918.html    
+                 http://blog.csdn.net/sinat_25127047/article/details/50596905     
 4、axios:https://github.com/mzabriskie/axios     
 5、路由拦截：http://www.tuicool.com/articles/JRJFN3N     
-6、图片上传：http://blog.csdn.net/swingpyzf/article/details/20230865    https://segmentfault.com/q/1010000007566567    
+6、图片上传：http://blog.csdn.net/swingpyzf/article/details/20230865    
+            https://segmentfault.com/q/1010000007566567    
 7、项目中用到的豆瓣api：https://developers.douban.com/wiki/?title=movie_v2#subject    
 8、vue-router官方文档：https://router.vuejs.org/zh-cn/    
-9、webpack配置篇：http://www.cnblogs.com/brandonhulala/p/6057378.html    
-
+9、webpack配置篇：http://www.cnblogs.com/brandonhulala/p/6057378.html（vue1.0）    
+                 http://www.cnblogs.com/brandonhulala/p/6120078.html（vue2.0的一些不同）
+                 http://www.cnblogs.com/lhweb15/p/5660609.html(vue2.0)
 ## Build Setup（项目启动）
 
 npm和cnpm
