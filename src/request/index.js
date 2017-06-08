@@ -4,7 +4,7 @@
 
 //导入模块
 import axios from 'axios'
-
+import {result_code} from 'common/request_api'
 
 const install = (Vue) => {
   if (install.installed) return
@@ -39,7 +39,7 @@ const install = (Vue) => {
   axios.interceptors.request.use(
     (config) => {
       //在发送请求之前做某事
-      //config.url = 'vueApi' + '/idPGx6mR' + config.url
+ //     config.url = 'vueApi' + '/rpGhd6BD' + config.url
       config.url = '/api' + config.url
       return config
     },
@@ -55,6 +55,14 @@ const install = (Vue) => {
    */
   axios.interceptors.response.use(
     (response) => {
+      //没有登录的响应拦截,跳转登录页(登录页地址,后端传入)
+      if (response.data.code === result_code.unlogin) {
+        $vue.$message.warning('您没有登录，请先前往登录')
+        setTimeout(() => {
+          window.location.href = response.data.data
+        }, 1000)
+        return
+      }
       return response
     },
     (error) => {
