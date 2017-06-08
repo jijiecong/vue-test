@@ -26,6 +26,9 @@
       autoUpload: {
         type: Boolean,
         require: true
+      },
+      imageUrl: {
+        type: String,
       }
     },
     data() {
@@ -34,8 +37,7 @@
         dialogVisible: false
       };
     },
-    create(){
-
+    created(){
     },
     methods: {
       async httpRequest(option) {//自定义上传方法

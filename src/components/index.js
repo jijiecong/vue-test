@@ -2,7 +2,7 @@
  *
  * 组件
  *
- * @Date: 2017/3/23 18:41
+ * @Date: 2017/6/7 18:41
  *
  */
 //主体内容顶部title
@@ -16,11 +16,14 @@ import transferMeiren from 'components/transferMeiren'
 import searchSelect from 'components/searchSelect'
 //照片墙
 import imageUpload from 'components/imageUpload'
+//可预览照片列表
+import imagePreview from 'components/imagePreview'
 export {
   simpleSelect,
   panelTitle,
   simpleImageUpload,
   transferMeiren,
   searchSelect,
-  imageUpload
+  imageUpload,
+  imagePreview
 }

@@ -6,7 +6,11 @@
          element-loading-text="拼命加载中" >
       <el-row>
         <el-col :offset="14">
+
           <el-form ref="form" :model="form" label-width="80px" >
+            <el-form-item label="海报:" prop="image">
+              <image-preview :disabled="disabled" :fileList="fileList"></image-preview>
+            </el-form-item>
             <el-form-item label="电影名:" prop="title">
               <el-input v-model="form.title" placeholder="请输入内容" :readonly="true"></el-input>
             </el-form-item>
@@ -40,7 +44,7 @@
 </template>
 
 <script>
-  import {panelTitle } from 'components'
+  import {panelTitle,imagePreview } from 'components'
   import {vue_test} from 'common/request_api'
 
   export default{
@@ -48,6 +52,11 @@
       return {
         id: this.$route.params.id,
         load_data: true,
+        autoUpload: true,
+        action: '',
+        imageUrl:'',
+        fileList:[],
+        disabled: true,
         form: {
           title:'',
           summary:'',
@@ -70,6 +79,8 @@
 
         }).then(({data}) => {
           this.form = data
+          this.imageUrl = data.images.medium
+          this.fileList.push({url:data.images.medium,name:data.title})
           this.load_data = false
         }).catch(() => {
           this.load_data = false
@@ -77,7 +88,8 @@
       },
     },
     components: {
-      panelTitle
+      panelTitle,
+      imagePreview
     }
   }
 </script>

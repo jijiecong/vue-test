@@ -7,6 +7,10 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 const routes = [
   {
+    path: '/', name: 'index',
+    meta: { title: "豆瓣电影" },
+    components: { default: () => import('pages/movie/list') },
+  }, {
     path: '/movie/list', name: 'movieList',
     meta: { title: "豆瓣电影" },
     components: { default: () => import('pages/movie/list') },

@@ -141,6 +141,8 @@
       },
       //刷新
       on_refresh(){
+        this.start = 0
+        this.currentPage = 1
         this.get_table_data()
       },
       //获取数据
