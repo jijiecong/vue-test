@@ -1,13 +1,4 @@
-##npm和cnpm
-vue官网例子提供的是npm，但是由于在国内，推荐使用淘宝镜像（本项目使用的也是淘宝镜像）
-####安装方法：
-1、安装node.js(http://www.runoob.com/nodejs/nodejs-install-setup.html)
-2、基于node.js,利用淘宝npm镜像安装相关依赖
-``` bash
-# replace npm with cnpm
-npm install -g cnpm –-registry=https://registry.npm.taobao.org
-```
-之后所有命令的npm都用cnpm来替代即可
+
 
 ##项目已有功能
 
@@ -38,9 +29,21 @@ npm install -g cnpm –-registry=https://registry.npm.taobao.org
 5、路由拦截：http://www.tuicool.com/articles/JRJFN3N 
 6、图片上传：http://blog.csdn.net/swingpyzf/article/details/20230865 https://segmentfault.com/q/1010000007566567
 7、项目中用到的豆瓣api：https://developers.douban.com/wiki/?title=movie_v2#subject
-8、vue-router文档：https://router.vuejs.org/zh-cn/
+8、vue-router官方文档：https://router.vuejs.org/zh-cn/
 
 ## Build Setup（项目启动）
+
+##npm和cnpm
+vue官网例子提供的是npm，但是由于在国内，推荐使用淘宝镜像（本项目使用的也是淘宝镜像）
+
+####安装方法：
+1、安装node.js(http://www.runoob.com/nodejs/nodejs-install-setup.html)
+2、基于node.js,利用淘宝npm镜像安装相关依赖
+``` bash
+# replace npm with cnpm
+npm install -g cnpm –-registry=https://registry.npm.taobao.org
+```
+之后所有命令的npm都用cnpm来替代即可
 
 ``` bash
 # install dependencies
