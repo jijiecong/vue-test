@@ -110,6 +110,8 @@
         title:'',
         city: '杭州',
         articles:[],
+        //批量选择的数组
+        multipleSelection:[],
         //请求时的loading效果
         load_data: true
       }

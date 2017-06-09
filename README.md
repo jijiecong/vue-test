@@ -1,18 +1,40 @@
-
+## 目录结构
+<pre>
+├── build                     // 项目的 Webpack 配置文件
+├── config                    // 项目配置目录
+├── src                       // vue前端生产目录
+│   ├── assets                // 一些资源文件
+│   ├── common                // 通用文件、如工具类、状态码,请求api配置
+│   ├── components            // 各种组件
+│   ├── pages                 // 各种页面
+│   ├── requset               // axios配置(JS HTTP库/Ajax库)
+│   ├── router                // 路由配置及map
+│   ├── store                 // Vuex 状态管理器
+│   ├── App.vue               // 根组件
+│   ├── main.js               // Webpack 编译入口文件，入口js
+├── static                    // 前端静态资源，一般把不需要处理的文件可以放这里
+├── .babelrc                  // babelrc配置文件
+├── .editorconfig             // 代码风格文件，前提是要你的编辑器支持(idea支持)
+├── .gitignore                // 用于Git配置不需要加入版本管理的文件
+├── favicon.ico               // ico小图标
+├── index.html                // 项目入口文件
+├── package.json              // 项目配置文件
+</pre>
 
 ##项目已有功能
 
-1、包括了一些组件
+1、包括了一些组件    
    简单select，可查询的select，穿梭框，上传图片等，具体见components目录下   
-2、路由配置
+2、路由配置    
    使用vue-router,具体见router目录下   
-3、请求配置
+3、请求配置    
    ①由于vue2.0版，停止维护vue-resource，作者推荐使用axios（本项目使用的也是axios），具体见request目录下；   
    ②由于ajax不支持跨域，有需要用到代理（proxyTable）的同学配置见config/index.js；   
    ③使用到body-parser中间件对post参数进行解析，配置见bulid/dev-server.js    
-4、状态管理配置
+4、状态管理配置    
    使用vuex,具体见store目录下    
-
+5、时间插件/qs插件（用来字符串化对象或解析字符串）/nprogress（进度条）插件，具体见common/plugins目录下    
+    
 ##前端框架(vue)学习手册
 
 1、vue:https://cn.vuejs.org (熟悉框架特点)    
