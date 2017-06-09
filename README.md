@@ -33,6 +33,7 @@
    ③使用到body-parser中间件对post参数进行解析，配置见bulid/dev-server.js    
 4、状态管理配置    
    使用vuex,具体见store目录下    
+   注意：vuex中就算是不同store下,actions里面的函数名不允许有重复
 5、时间插件/qs插件（用来字符串化对象或解析字符串）/nprogress（进度条）插件，具体见common/plugins目录下    
     
 ##前端框架(vue)学习手册
@@ -57,6 +58,8 @@
 9、webpack配置篇：http://www.cnblogs.com/brandonhulala/p/6057378.html（vue1.0）    
                  http://www.cnblogs.com/brandonhulala/p/6120078.html（vue2.0的一些不同）
                  http://www.cnblogs.com/lhweb15/p/5660609.html(vue2.0)
+10、vuex：http://www.cnblogs.com/huansky/p/6517237.html    
+
 ## Build Setup（项目启动）
 
 npm和cnpm

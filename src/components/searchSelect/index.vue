@@ -105,7 +105,7 @@
         this.currentValue = value;
       },
       initData() {
-        if (this.initId !== undefined && this.initId !== null && !this.initOk) {
+        if (this.initId !== undefined && this.initId !== null && !this.initOk && this.initId.length !==0 ) {
           this.canQuery = false
           this.load_data = true
           this.$http.get(this.selectUrl, {
