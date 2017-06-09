@@ -17,11 +17,15 @@ import request from './request'
 import ElementUI from 'element-ui'
 //导入状态管理器
 import store from 'store'
+//导入plugins自定义插件
+import plugins from 'common/plugins'
 
 //使用request
 Vue.use(request)
 //使用element-ui
 Vue.use(ElementUI)
+//使用plugins自定义插件
+Vue.use(plugins)
 
 new Vue({
   router,
