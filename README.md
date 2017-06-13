@@ -59,6 +59,7 @@
                  http://www.cnblogs.com/brandonhulala/p/6120078.html（vue2.0的一些不同）
                  http://www.cnblogs.com/lhweb15/p/5660609.html(vue2.0)
 10、vuex：http://www.cnblogs.com/huansky/p/6517237.html    
+11、cnpm淘宝镜像：https://npm.taobao.org/    
 
 ## Build Setup（项目启动）
 
