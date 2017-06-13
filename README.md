@@ -21,7 +21,7 @@
 ├── package.json              // 项目配置文件
 </pre>
 
-##项目已有功能
+## 项目已有功能
 
 1、包括了一些组件    
    简单select，可查询的select，穿梭框，上传图片等，具体见components目录下   
@@ -36,14 +36,14 @@
    注意：vuex中就算是不同store下,actions里面的函数名不允许有重复
 5、时间插件/qs插件（用来字符串化对象或解析字符串）/nprogress（进度条）插件，具体见common/plugins目录下    
     
-##前端框架(vue)学习手册
+## 前端框架(vue)学习手册
 
 1、vue:https://cn.vuejs.org (熟悉框架特点)    
 2、vue-cli:https://github.com/vuejs/vue-cli (学会使用vue-cli,webpack模式下,创建出来的,项目demo)    
 3、element-ui:http://element.eleme.io/#/zh-CN/component/installation (学会使用组件-本例是饿了么的组件)    
 4、es6语法:http://es6.ruanyifeng.com (简单了解)    
 
-##一些资料
+## 一些资料
 
 1、代理相关：http://blog.csdn.net/u012857153/article/details/71403530     
 2、.babelrc配置文件（）：http://www.tuicool.com/articles/rA7Vjiz    
