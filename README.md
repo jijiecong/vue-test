@@ -1,3 +1,6 @@
+## 开发工具
+推荐使用idea开发,安装Vue,Node的扩展,直接在Plugins中搜索就可以看到
+
 ## 目录结构
 <pre>
 ├── build                     // 项目的 Webpack 配置文件
@@ -33,7 +36,7 @@
    ③使用到body-parser中间件对post参数进行解析，配置见bulid/dev-server.js    
 4、状态管理配置    
    使用vuex,具体见store目录下    
-   注意：vuex中就算是不同store下,actions里面的函数名不允许有重复
+   注意：vuex中就算是不同store下,actions里面的函数名不允许有重复     
 5、时间插件/qs插件（用来字符串化对象或解析字符串）/nprogress（进度条）插件，具体见common/plugins目录下    
     
 ## 前端框架(vue)学习手册
@@ -45,35 +48,35 @@
 
 ## 一些资料
 
-1、代理相关：http://blog.csdn.net/u012857153/article/details/71403530     
-2、.babelrc配置文件（）：http://www.tuicool.com/articles/rA7Vjiz    
+1、代理相关篇：http://blog.csdn.net/u012857153/article/details/71403530     
+2、.babelrc配置文件（）篇：http://www.tuicool.com/articles/rA7Vjiz    
 3、bodyParse和qs：http://www.cnblogs.com/wuqun/p/5942918.html    
                  http://blog.csdn.net/sinat_25127047/article/details/50596905     
-4、axios:https://github.com/mzabriskie/axios     
-5、路由拦截：http://www.tuicool.com/articles/JRJFN3N     
-6、图片上传：http://blog.csdn.net/swingpyzf/article/details/20230865    
+4、axios篇:https://github.com/mzabriskie/axios     
+5、路由拦截篇：http://www.tuicool.com/articles/JRJFN3N     
+6、图片上传篇：http://blog.csdn.net/swingpyzf/article/details/20230865    
             https://segmentfault.com/q/1010000007566567    
-7、项目中用到的豆瓣api：https://developers.douban.com/wiki/?title=movie_v2#subject    
-8、vue-router官方文档：https://router.vuejs.org/zh-cn/    
+7、项目中用到的豆瓣api篇：https://developers.douban.com/wiki/?title=movie_v2#subject    
+8、vue-router官方文档篇：https://router.vuejs.org/zh-cn/    
 9、webpack配置篇：http://www.cnblogs.com/brandonhulala/p/6057378.html（vue1.0）    
                  http://www.cnblogs.com/brandonhulala/p/6120078.html（vue2.0的一些不同）
                  http://www.cnblogs.com/lhweb15/p/5660609.html(vue2.0)
-10、vuex：http://www.cnblogs.com/huansky/p/6517237.html    
-11、cnpm淘宝镜像：https://npm.taobao.org/    
-
+10、vuex篇：http://www.cnblogs.com/huansky/p/6517237.html       
+11、cnpm淘宝镜像篇：https://npm.taobao.org/    
+12、表单自带校验规则篇：https://github.com/tmpfs/async-validate
 ## Build Setup（项目启动）
 
 npm和cnpm
 vue官网例子提供的是npm，但是由于在国内，推荐使用淘宝镜像（本项目使用的也是淘宝镜像）    
 
-安装方法：
+安装方法：     
 1、安装node.js(http://www.runoob.com/nodejs/nodejs-install-setup.html)    
 2、基于node.js,利用淘宝npm镜像安装相关依赖    
 ``` bash
 # replace npm with cnpm
 npm install -g cnpm –-registry=https://registry.npm.taobao.org
 ```
-之后所有命令的npm都用cnpm来替代即可    
+3、之后所有命令的npm都用cnpm来替代即可    
 
 ``` bash
 # install dependencies
@@ -85,5 +88,3 @@ cnpm run dev
 # build for production with minification
 cnpm run build
 ```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
